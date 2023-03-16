@@ -8,13 +8,13 @@ class Atom
 private:
 	int protonNumber;
 	int neutronNumber;
-	int electroNumber;
-	Atom(int protonNumber, int neutronNumber, int electroNumber);
+	int electronNumber;
+	Atom(int protonNumber, int neutronNumber, int electronNumber);
 public:
 	double getMass();
 	double getElectronCharge();
-	double getProtonNumber();
-	string getConfiguration();
+	int getProtonNumber();
+	string toString();
 
 	friend class AtomFactory;
 };

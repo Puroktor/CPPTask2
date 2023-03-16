@@ -16,7 +16,7 @@ public:
 	double getMass();
 	int getAtomNumber(int protonNumber);
 	void shuffleAtomPositions();
-	string getConfiguration();
+	string toString();
 	Atom** getAtoms();
 	void addAtom(Atom* atom);
 	~Molecule();

@@ -5,13 +5,13 @@
 using std::to_string;
 
 /*
-* ≈сли считать энергию взаимодействи€ "по правде", учитыва€ все факторы - можно написать дисертацию :)
-* ѕоэтому будем учитывать только силу взаимодействи€ электронных оболочек по закону  улона.
-* Ќаверное, это и имелось в виду в условии.
+* If we calculate energy like in reality, we will write a dissertation :)
+* Therefore, we will take into account only the force of interaction of electron shells according to the Coulomb law.
+* Probably this was meant in the task.
 */
 double Molecule::getEnergy()
 {
-    // shuffleAtomPositions(); - в реальной жизни атомы движутс€, но дл€ демонстрации оставим так
+    // shuffleAtomPositions(); - in real life atoms do move, but for the demonstration let's leave it like this
     double energy = 0;
     for (const auto& entry : atomToCoordinateMap)
     {
@@ -41,8 +41,8 @@ double Molecule::getMass()
 }
 
 /*
-* “ип атома определ€етс€ пор€дковым номером в таблице ћенделеева.
-* ј он, в свою очередь, числом протонов в €дре.
+* Atom type is defined by serial number in the periodic table.
+* And it is equal to the number of protons.
 */
 int Molecule::getAtomNumber(int protonNumber)
 {
@@ -73,12 +73,12 @@ void Molecule::shuffleAtomPositions()
         entry.second = createNewRandomCoordinate();
 }
 
-string Molecule::getConfiguration()
+string Molecule::toString()
 {
     string config = "";
     int i = 0;
     for (const auto& entry : atomToCoordinateMap)
-        config += to_string(++i) + ": " + entry.first->getConfiguration() + "\n";
+        config += to_string(++i) + ": " + entry.first->toString() + "\n";
     return config;
 }
 

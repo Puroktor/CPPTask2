@@ -41,7 +41,7 @@ int main()
 			goto end;
 		case 1:
 			cout << "Configuration:" << endl;
-			cout << molecule->getConfiguration() << endl;
+			cout << molecule->toString() << endl;
 			break;
 		case 2:
 			n = readNumberOfProtons();
